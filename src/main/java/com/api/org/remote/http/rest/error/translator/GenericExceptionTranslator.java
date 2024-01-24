@@ -15,7 +15,7 @@ import com.api.org.exception.transformer.BaseErrorMessage;
 
 
 @ControllerAdvice
-public class LObjectExceptionTranslator {
+public class GenericExceptionTranslator {
 	
 	public static final String ERROR_CODE = "errorCode";
 	public static final String ERROR_MESSAGE = "errorMessage";

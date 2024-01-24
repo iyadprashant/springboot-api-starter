@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-public class LouiTechRunner {
+public class GenericSpringAPIApp {
 
 	
 	public static void main(String[] args) {
@@ -19,9 +19,9 @@ public class LouiTechRunner {
 	    System.out.println(System.getProperty("java.runtime.version"));
 	    
 
-	    SpringApplication app = new SpringApplication(LouiTechRunner.class);
+	    SpringApplication app = new SpringApplication(GenericSpringAPIApp.class);
 
-		app.run(LouiTechRunner.class, args);
+		app.run(GenericSpringAPIApp.class, args);
 		
 	}
 	

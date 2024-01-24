@@ -5,22 +5,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GenericLObjectError {
+public class GenericError {
 	
 	Boolean errored = true;
 	String errorCode = "";
 	String errorMessage = "";
 	Map<String, Object> data = new HashMap<>();
-	List<GenericLObjectError> errorStack = new ArrayList<>();
+	List<GenericError> errorStack = new ArrayList<>();
 	
 	
-	public void addNestedError(GenericLObjectError error) {
+	public void addNestedError(GenericError error) {
 		errorStack.add(error);
 	}
 	
-	public GenericLObjectError addNestedError(String errorCode, String errorMessage) {
+	public GenericError addNestedError(String errorCode, String errorMessage) {
 		
-		GenericLObjectError err = new GenericLObjectError();
+		GenericError err = new GenericError();
 		err.setErrorCode(errorCode);
 		err.setErrorMessage(errorMessage);
 		errorStack.add(err);
@@ -28,9 +28,9 @@ public class GenericLObjectError {
 	}
 	
 	
-	public GenericLObjectError addNestedError(String errorCode, String errorMessage, Map<String, Object> data) {
+	public GenericError addNestedError(String errorCode, String errorMessage, Map<String, Object> data) {
 		
-		GenericLObjectError err = new GenericLObjectError();
+		GenericError err = new GenericError();
 		err.setErrorCode(errorCode);
 		err.setErrorMessage(errorMessage);
 		err.setData(data);
@@ -72,11 +72,11 @@ public class GenericLObjectError {
 		this.data = data;
 	}
 
-	public List<GenericLObjectError> getErrorStack() {
+	public List<GenericError> getErrorStack() {
 		return errorStack;
 	}
 
-	public void setErrorStack(List<GenericLObjectError> errorStack) {
+	public void setErrorStack(List<GenericError> errorStack) {
 		this.errorStack = errorStack;
 	}
 	
