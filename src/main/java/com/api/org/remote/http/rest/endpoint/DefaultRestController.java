@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping(value = "/lobject")
 @RestController()
-public class LObjectController {
+public class DefaultRestController {
 
 
 //	@Autowired
